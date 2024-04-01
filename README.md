@@ -44,6 +44,18 @@ consulta para ver todos los usuarios que hay pero solo sirve si se le inserta en
 
 metodo para eliminar un usuario pero solo servira insertando el token en el apartado de header en insognia
 
+### PUT http://127.0.0.1:8080/register/4
+
+metodo para actualizar un usuario admin pero solo se puede hacer cuando esta el token en el header
+
+```
+{
+  "id": 1,
+  "username": "juan",
+  "password": "4321"
+}
+```
+
 
 ### GET http://localhost:8080/contenido/crearContenido
 

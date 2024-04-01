@@ -3,7 +3,6 @@ package com.filtro.leiderTami.domain.service;
 import com.filtro.leiderTami.domain.exception.InvalidStateException;
 import com.filtro.leiderTami.domain.repository.ContenidoAudiovisualRepository;
 import com.filtro.leiderTami.persistence.ContenidoAudiovisual;
-import com.filtro.leiderTami.persistence.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,4 +50,6 @@ public class ContenidoAudiovisualService implements ServiceInterface<ContenidoAu
     public ContenidoAudiovisual update(ContenidoAudiovisual object) {
         return null;
     }
+
+
 }

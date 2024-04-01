@@ -24,4 +24,6 @@ public class ContenidoAudiovisualController {
         ContenidoAudiovisual contenido = contenidoService.obtenerContenidoPorId(id);
         return ResponseEntity.ok(contenido);
     }
+
+
 }

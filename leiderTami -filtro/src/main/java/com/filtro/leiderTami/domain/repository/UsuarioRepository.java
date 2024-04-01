@@ -11,4 +11,6 @@ import java.util.List;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     List<ContenidoAudiovisual> findByContenidosUsuarioId(Long idUsuario);
+
+    List<ContenidoAudiovisual> findAllById(Long id);
 }

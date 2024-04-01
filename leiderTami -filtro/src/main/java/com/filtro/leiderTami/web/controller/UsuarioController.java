@@ -12,7 +12,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api/usuarios")
+@RequestMapping("/usuarios")
 public class UsuarioController {
 
     @Autowired
@@ -30,11 +30,6 @@ public class UsuarioController {
         return usuario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{id}/contenidos")
-    public ResponseEntity<List<ContenidoAudiovisual>> obtenerContenidosPorUsuario(@PathVariable Long id) {
-        List<ContenidoAudiovisual> contenidos = usuarioService.obtenerContenidosPorUsuario(id);
-        return ResponseEntity.ok(contenidos);
-    }
 
     @PutMapping("/{id}")
     public ResponseEntity<Usuario> actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuario) {

@@ -46,6 +46,7 @@ public class UsuarioService implements ServiceInterface<Usuario>{
     }
 
     public void deleteById(Long id) {
+        List<ContenidoAudiovisual> contenidoAudiovisuals = usuarioRepository.findAllById(id);
         usuarioRepository.deleteById(id);
     }
 
