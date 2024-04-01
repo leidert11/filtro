@@ -36,6 +36,14 @@ estos parametros se insertan en la seccion de query en insognia para que cree un
     "username": "leider",
     "password": "1234"
 ```
+### GET http://localhost:8080/register
+
+consulta para ver todos los usuarios que hay pero solo sirve si se le inserta en token en el apartado de header en la consulta
+
+### DELETE http://localhost:8080/register/2
+
+metodo para eliminar un usuario pero solo servira insertando el token en el apartado de header en insognia
+
 
 ### GET http://localhost:8080/contenido/crearContenido
 
@@ -68,4 +76,3 @@ Authorization : valor el token generado
 
 query para buscar un contenido audio visual ya creado
 
-___
