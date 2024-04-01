@@ -88,3 +88,29 @@ Authorization : valor el token generado
 
 query para buscar un contenido audio visual ya creado
 
+### PUT http://localhost:8080/contenido/crearContenido/1
+
+
+metodo para actualizar un contenido audio visual primero se debe de insertar el token en el apartado de headers
+
+Authorization : valor el token generado
+```
+
+**se inserta lo datos en formato json**
+
+```
+
+{
+  "id":1  
+  "nombre": "string",
+  "tipo": "string",
+  "generos": [
+    "accion"
+  ],
+  "estado": "TERMINADO",
+  "plataforma": "accion",
+  "calificacion": 2,
+  "comentario": "buena peli",
+  "usuario_": 1
+}
+```
