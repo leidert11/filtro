@@ -27,7 +27,6 @@ en este metodo se crea el usuario para asi con el metodo login logearse
 }
 ```
 ### POST http://localhost:8080/login
-        |
 
 estos parametros se insertan en la seccion de query en insognia para que cree un token para el usuario
 
