@@ -1,3 +1,19 @@
+### clonacion del proyecto
+
+comando para clonar el repositorio 
+
+```
+git clone https://github.com/leidert11/filtro.git
+```
+
+## se debe ingresar a mysql para insertar el comando de creacion de la base de datos:
+
+```sql
+create database filtro;
+```
+
+## despues de insertar el comando se debe poner a correr el proyecto y automaticamente se crearan las tablas 
+
 ### POST http://localhost:8080/register
 
 en este metodo se crea el usuario para asi con el metodo login logearse
