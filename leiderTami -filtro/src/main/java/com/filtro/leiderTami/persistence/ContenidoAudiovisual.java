@@ -35,6 +35,18 @@ public class ContenidoAudiovisual {
         return nombre;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

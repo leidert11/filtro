@@ -1,4 +1,4 @@
 package com.filtro.leiderTami.persistence.DTO;
 
-public class GEneroDto {
+public class GeneroDto {
 }

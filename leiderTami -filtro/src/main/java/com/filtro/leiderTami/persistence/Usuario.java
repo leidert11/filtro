@@ -15,7 +15,6 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario")
     private List<ContenidoAudiovisual> contenidos;
-
     public Long getId() {
         return id;
     }
