@@ -1,25 +1,56 @@
-### POST /1/billing/cancel-trial.json
-Cancels a trial for a user. `official client only`
+### POST http://localhost:8080/register
 
-**Parameters**
+en este metodo se crea el usuario para asi con el metodo login logearse
 
-|          Name | Required |  Type   | Description                                                                                                                                                         |
-| -------------:|:--------:|:-------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `product` | required | string  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                   |
-|    `cta` | optional | string  | Can be used for tracking purpose - [Read more](https://github.com/leidert11/filtro)          |
-
-**Response**
+**se inserta lo datos en formato json**
 
 ```
 {
-    "success": true
-}
-
-or any implemented error from https://buffer.com/developers/api/errors
-
-{
-    "code": 1000,
-    "error": "An error message"
+    "username": "leider",
+    "password": "1234"
 }
 ```
+### POST http://localhost:8080/login
+        |
+
+estos parametros se insertan en la seccion de query en insognia para que cree un token para el usuario
+
+
+**parametros para utilizar el metodo se insertan en el query**
+```
+    "username": "leider",
+    "password": "1234"
+```
+
+### GET http://localhost:8080/contenido/crearContenido
+
+metodo para crear un contenido audio visual primero se debe de insertar el token en el apartado de headers
+
+```
+
+Authorization : valor el token generado
+```
+
+**se inserta lo datos en formato json**
+
+```
+
+{
+  "nombre": "string",
+  "tipo": "string",
+  "generos": [
+    "accion"
+  ],
+  "estado": "PENDIENTE",
+  "plataforma": "accion",
+  "calificacion": 10,
+  "comentario": "buena peli",
+  "usuario_": 1
+}
+```
+
+### GET http://localhost:8080/contenido/1
+
+query para buscar un contenido audio visual ya creado
+
 ___
