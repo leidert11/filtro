@@ -4,6 +4,7 @@ import com.filtro.leiderTami.domain.repository.UsuarioRepository;
 import com.filtro.leiderTami.persistence.ContenidoAudiovisual;
 import com.filtro.leiderTami.persistence.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -52,6 +53,11 @@ public class UsuarioService implements ServiceInterface<Usuario>{
 
     public Usuario update(Usuario usuario) {
         return usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public ResponseEntity<ContenidoAudiovisual> update(Object id, ContenidoAudiovisual contenidoUpdate) {
+        return null;
     }
 
     public List<ContenidoAudiovisual> obtenerContenidosPorUsuario(Long idUsuario) {

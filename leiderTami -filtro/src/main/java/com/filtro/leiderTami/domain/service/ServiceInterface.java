@@ -1,5 +1,7 @@
 package com.filtro.leiderTami.domain.service;
 
+import com.filtro.leiderTami.persistence.ContenidoAudiovisual;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,4 +14,6 @@ public interface ServiceInterface<T> {
     T save(T object);
     void deleteById(Integer id);
     T update(T object);
+
+    ResponseEntity<ContenidoAudiovisual> update(Object id, ContenidoAudiovisual contenidoUpdate);
 }

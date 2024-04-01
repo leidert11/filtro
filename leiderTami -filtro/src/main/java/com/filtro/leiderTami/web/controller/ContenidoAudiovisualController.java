@@ -1,6 +1,7 @@
 package com.filtro.leiderTami.web.controller;
 
 import com.filtro.leiderTami.domain.service.ContenidoAudiovisualService;
+import com.filtro.leiderTami.persistence.Admin;
 import com.filtro.leiderTami.persistence.ContenidoAudiovisual;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,9 @@ public class ContenidoAudiovisualController {
         ContenidoAudiovisual contenido = contenidoService.obtenerContenidoPorId(id);
         return ResponseEntity.ok(contenido);
     }
-
+    @PutMapping("/{id}")
+    public ResponseEntity<ContenidoAudiovisual> updatecontenido( @PathVariable Object id, @RequestBody ContenidoAudiovisual updatecontenido) {
+        return contenidoService.update(id, updatecontenido);
+    }
 
 }

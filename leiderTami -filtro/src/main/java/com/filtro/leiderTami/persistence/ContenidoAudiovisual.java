@@ -113,5 +113,20 @@ public class ContenidoAudiovisual {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    @Override
+    public String toString() {
+        return "ContenidoAudiovisual{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", generos=" + generos +
+                ", estado=" + estado +
+                ", plataforma='" + plataforma + '\'' +
+                ", calificacion=" + calificacion +
+                ", comentario='" + comentario + '\'' +
+                ", usuario=" + usuario +
+                '}';
+    }
 }
 
