@@ -27,24 +27,31 @@ public class ContenidoAudiovisual {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    public void setId(Long id) {
-        this.id = id;
+    public ContenidoAudiovisual() {
     }
 
-    public String getNombre() {
-        return nombre;
+    public ContenidoAudiovisual(Long id, String nombre, String tipo, Set<String> generos, EstadoVisualizacion estado, String plataforma, Double calificacion, String comentario, Usuario usuario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.generos = generos;
+        this.estado = estado;
+        this.plataforma = plataforma;
+        this.calificacion = calificacion;
+        this.comentario = comentario;
+        this.usuario = usuario;
     }
 
     public Long getId() {
         return id;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public String getNombre() {
+        return nombre;
     }
 
     public void setNombre(String nombre) {
@@ -99,5 +106,12 @@ public class ContenidoAudiovisual {
         this.comentario = comentario;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }
 

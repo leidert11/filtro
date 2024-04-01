@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,6 +16,14 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario")
     private List<ContenidoAudiovisual> contenidos;
+
+    public Usuario(Long id, String nombre, String correoElectronico, List<ContenidoAudiovisual> contenidos) {
+        this.id = id;
+        this.nombre = nombre;
+        this.correoElectronico = correoElectronico;
+        this.contenidos = contenidos;
+    }
+
     public Long getId() {
         return id;
     }

@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/usuarios")
@@ -18,14 +20,14 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario) {
-        Usuario nuevoUsuario = usuarioService.crearUsuario(usuario);
+        Usuario nuevoUsuario = usuarioService.save(usuario);
         return ResponseEntity.ok(nuevoUsuario);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> obtenerUsuarioPorId(@PathVariable Long id) {
-        Usuario usuario = usuarioService.obtenerUsuarioPorId(id);
-        return ResponseEntity.ok(usuario);
+        Optional<Usuario> usuario = usuarioService.findById(id);
+        return usuario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping("/{id}/contenidos")
@@ -34,4 +36,16 @@ public class UsuarioController {
         return ResponseEntity.ok(contenidos);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Usuario> actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuario) {
+        usuario.setId(id);
+        Usuario usuarioActualizado = usuarioService.update(usuario);
+        return ResponseEntity.ok(usuarioActualizado);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarUsuario(@PathVariable Long id) {
+        usuarioService.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }

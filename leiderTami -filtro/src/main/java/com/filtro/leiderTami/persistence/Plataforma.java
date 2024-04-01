@@ -11,5 +11,4 @@ public class Plataforma {
     private Long id;
 
     private String nombre;
-
 }

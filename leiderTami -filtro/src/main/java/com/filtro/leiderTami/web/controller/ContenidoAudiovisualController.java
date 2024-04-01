@@ -7,13 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/contenidos")
+@RequestMapping("/contenido")
 public class ContenidoAudiovisualController {
 
     @Autowired
     private ContenidoAudiovisualService contenidoService;
 
-    @PostMapping
+    @PostMapping("/crearContenido")
     public ResponseEntity<ContenidoAudiovisual> crearContenido(@RequestBody ContenidoAudiovisual contenido) {
         ContenidoAudiovisual nuevoContenido = contenidoService.crearContenido(contenido);
         return ResponseEntity.ok(nuevoContenido);

@@ -14,7 +14,6 @@ public class User {
     public User() {
     }
 
-
     public User(String user, String pass, String token) {
         this.user = user;
         this.pass = pass;
